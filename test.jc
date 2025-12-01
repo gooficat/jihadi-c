@@ -1,0 +1,7 @@
+u32 main() {
+    u16 outv;
+
+    outv = 64;
+
+    return outv;
+}
