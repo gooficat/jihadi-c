@@ -7,7 +7,37 @@
 #include <stdbool.h>
 #include <string.h>
 
+unsigned char typedef byte;
+unsigned short typedef word;
+unsigned int typedef dword;
+unsigned long long typedef qword;
 
+
+struct {
+    byte *data;
+    unsigned char len;
+} typedef bytearr_s;
+
+byte typedef reg_t;
+
+union {
+    dword dw;
+    byte b[2];
+} typedef dw_b_u;
+
+bytearr_s mov_r_dw(reg_t reg, dword imm) {
+    bytearr_s out;
+    out.data = malloc((out.len = 3));
+    out.data[0] = 0x88 + reg;
+    dw_b_u u = {
+        imm
+    };
+
+    out.data[1] = u.b[0];
+    out.data[2] = u.b[1];
+
+    return out;
+}
 
 void fetch_token(FILE * f, char * b) {
     int c = fgetc(f);
@@ -48,7 +78,7 @@ struct {
 struct reg {
     const char * qw, * dw;
     const char * w, * h, * l;
-    unsigned char code;
+    reg_t code;
     bool reserved;
 } registers[4] = {
     {
@@ -129,9 +159,10 @@ int main(int argc, char * argv[]) {
                             strcpy_s(statement[j++], tl, tk);
                         }
 
-                        for (int k = 0; k != j; ++k) {
+                        register int k = 0;
+                        while (k != j) {
                             printf_s("%s\n", statement[k]);
-                            free(statement[k]);
+                            free(statement[k++]);
                         }
                         if (statement != NULL) free(statement);
                     }
@@ -155,6 +186,14 @@ int main(int argc, char * argv[]) {
         
         fetch_token(f, tk);
     }
+
+    bytearr_s test = mov_r_dw(registers[1].code, 0xFFAA);
+
+    for (int i = 0; i != test.len; ++i) {
+        printf("%i: %hhx, %hhu\n", i, test.data[i], test.data[i]);
+    }
+
+    free(test.data);
 
     return 0;
 }
