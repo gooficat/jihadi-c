@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/User/Documents/Jihadi-C/build",
+  "command": "\"C:\\PROGRA~1\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DDEBUG -IC:\\Users\\User\\Documents\\Jihadi-C\\include /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -std:c17 -MDd /W4 /FoCMakeFiles\\jihadi-c.dir\\src\\main.c.obj /FdCMakeFiles\\jihadi-c.dir\\ /FS -c C:\\Users\\User\\Documents\\Jihadi-C\\src\\main.c",
+  "file": "C:/Users/User/Documents/Jihadi-C/src/main.c",
+  "output": "C:/Users/User/Documents/Jihadi-C/build/CMakeFiles/jihadi-c.dir/src/main.c.obj"
+},
+{
+  "directory": "C:/Users/User/Documents/Jihadi-C/build",
+  "command": "\"C:\\PROGRA~1\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\Hostx64\\x64\\cl.exe\"  /nologo -DDEBUG -IC:\\Users\\User\\Documents\\Jihadi-C\\include /DWIN32 /D_WINDOWS /Zi /Ob0 /Od /RTC1 -std:c17 -MDd /W4 /FoCMakeFiles\\jihadi-c.dir\\src\\fancc.c.obj /FdCMakeFiles\\jihadi-c.dir\\ /FS -c C:\\Users\\User\\Documents\\Jihadi-C\\src\\fancc.c",
+  "file": "C:/Users/User/Documents/Jihadi-C/src/fancc.c",
+  "output": "C:/Users/User/Documents/Jihadi-C/build/CMakeFiles/jihadi-c.dir/src/fancc.c.obj"
+}
+]

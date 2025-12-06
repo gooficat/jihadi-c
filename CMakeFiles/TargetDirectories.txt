@@ -1,0 +1,4 @@
+C:/Users/User/Documents/Jihadi-C/build/CMakeFiles/jihadi-c.dir
+C:/Users/User/Documents/Jihadi-C/build/CMakeFiles/test.dir
+C:/Users/User/Documents/Jihadi-C/build/CMakeFiles/edit_cache.dir
+C:/Users/User/Documents/Jihadi-C/build/CMakeFiles/rebuild_cache.dir
